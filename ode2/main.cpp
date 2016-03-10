@@ -61,7 +61,7 @@ int main() {
 	gp = popen("gnuplot -persist", "w");
 	fprintf(gp, "set tr [0:1.5]\n");
 	fprintf(gp, "set yr [0:10]\n");
-   	fprintf(gp, "set grid\n");
+    fprintf(gp, "set grid\n");
 
 
     
@@ -69,7 +69,7 @@ int main() {
     
     // 変数分離法で解くと y = exp(-2t)
     
-    cout << "i" << '\t' << "オイラー法" << '\t' << "ホイン法" << '\t' << "ルンゲ＝クッタ法" << '\t' << "y = exp(-2t)" << endl;
+    cout << "i" << '\t' << "オイラー法" << '\t' << "ホイン法" << '\t' << "ルンゲ＝クッタ法" << '\t' << "厳密解 y = exp(-2t)" << endl;
     yeu[0] = yhe[0] = yrk[0] = a;
         
 	fprintf(gp, "plot '-' w l lw 3\n");
