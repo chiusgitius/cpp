@@ -1,0 +1,56 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%																					  %
+%			【2014年フィードバック制御 Homework用スタイルファイル】						  %
+%			 自由に改変してもらって構いません．美しい文章を目指しましょう．					  %			
+%																					  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% include font/picture style %%%%
+\usepackage{amsmath,amssymb,amsthm}		% AmS packages
+\usepackage[dvipdfmx]{graphicx,color}	% paste graphics 変更:xに変更！
+\usepackage{fancybox,framed,ascmac}	
+
+%%%% set page-style %%%%
+\textwidth = 170mm
+\textheight = 250mm
+\topmargin = -15mm
+\oddsidemargin = -5.4mm
+\evensidemargin = -5.4mm
+\columnsep = 8mm
+
+%%%% set topic-style %%%%
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}	
+\rhead[]{}
+\cfoot{\thepage}
+\lfoot{}
+\rfoot{}
+\renewcommand{\headrulewidth}{0mm}
+\renewcommand{\footrulewidth}{0mm}
+
+\renewcommand{\figurename}{Fig.}
+\renewcommand{\tablename}{Table}
+
+%%%% define macro-word %%%%
+\theoremstyle{definition}		% alphabets in theorem environment are upright
+
+\newcounter{exam}[section]
+\newtheorem{HW}{HW}[section]
+\newtheorem{problem}{課題}
+
+\newenvironment{command}
+{\VerbatimEnvironment\begin{framed}\vspace{-1zw}\begin{Verbatim}}{\end{Verbatim}\vspace{-1zw}\end{framed}\noindent}
+
+\newenvironment{command2}
+{\VerbatimEnvironment\begin{framed}{\bf MATLAB Program}\hrule\begin{Verbatim}}{\end{Verbatim}\vspace{-1zw}\end{framed}\noindent}
+
+\newcommand{\rfig}[1]{Fig. \ref{#1}}
+\newcommand{\rtab}[1]{Table \ref{#1}}
+\newcommand{\req}[1]{式\eqref{#1}}
+\newcommand{\question}[1]{\fbox{\bf #1} \quad} 
+
+
+\renewcommand{\labelenumi}{\alph{enumi})}
+
+\definecolor{dgreen}{rgb}{0,0.5,0}

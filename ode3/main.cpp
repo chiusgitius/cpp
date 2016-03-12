@@ -7,7 +7,7 @@
 using namespace std;
 
 const double T = 2.;
-const double dt = 0.01;//0.01 dat.dat , 0.3 dat2.dat に出力
+const double dt = 0.3;//0.01 dat.dat , 0.3 dat2.dat に出力
 const double a1 = 1.;
 const double a2 = 0.;
 
@@ -60,10 +60,10 @@ int main(){
     for(auto i = 0; t < T; i++){
 		t = i * dt;
         
+		theo = theoretical(t);
         cout << t << " " << y1rk << " " << theo << " " << abs(y1rk - theo)/theo << endl;
         
 		newyrk(t, y1rk, y2rk);
-		theo = theoretical(t);
     } 
     
     return 0;
