@@ -1,4 +1,4 @@
-//chiu takae 3/12
+//chiu takae 3/15
 #include <iostream>
 #include <iomanip>
 #include <cmath>
@@ -7,8 +7,8 @@
 using namespace std;
 
 const double T = 100.;
-const double dt = 0.01;//0.01 dat.dat , 0.3 dat2.dat に出力
-const double a[3] = {10., 20., 30.};
+const double dt = 0.01;
+const double a[3] = {10., 20., 30.}; //default 10., 20., 30
 
 class func_3var{
 private:
@@ -34,6 +34,12 @@ func_3var solvefunc[3] = { // Lorentz equation
     func_3var(28., - 1., 0., 0., 0., -1.),
     func_3var(0., 0., - 8. / 3, 0., 1., 0.)
 };
+
+/* *default*
+    func_3var(- 10., 10., 0.),
+    func_3var(28., - 1., 0., 0., 0., -1.),
+    func_3var(0., 0., - 8. / 3, 0., 1., 0.)
+*/
 
 void newyrk(double t1, double (&y)[3]){ // 配列の参照
     double k1[4], k2[4], k3[4], k4[4];
